@@ -4,7 +4,8 @@
   "description": "neural network library",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive --compilers js:babel-core/register test"
+    "test": "mocha --recursive --compilers js:babel-core/register test",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
