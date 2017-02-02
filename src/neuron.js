@@ -8,7 +8,7 @@ export default class Neuron {
   activate() {
     this.activation =  squash(this.state)
 
-    return squash(this.state)
+    return this.activation
   }
 
 }

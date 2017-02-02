@@ -3,7 +3,7 @@ import Neuron from '../../src/neuron'
 
 describe('Neuron', () => {
 
-  describe('creation', () => {
+  describe('constructor', () => {
 
     it('should return new neuron object', () => {
       const neuron = new Neuron()

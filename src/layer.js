@@ -11,4 +11,10 @@ export default class Layer {
     }
   }
 
+  activate() {
+    const activation = this.neurons.map(neuron => neuron.activate())
+
+    return activation;
+  }
+
 }

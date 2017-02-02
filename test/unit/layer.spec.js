@@ -3,7 +3,7 @@ import Layer from '../../src/layer'
 
 describe('Layer', () => {
 
-  describe('creation', () => {
+  describe('constructor', () => {
 
     it('should return new layer object', () => {
       const layer = new Layer()
@@ -22,6 +22,20 @@ describe('Layer', () => {
       expect(layer.neurons).to.be.an('array')
       expect(layer.neurons).to.have.length(5)
       expect(layer.neurons[0]).to.be.an('object')
+    })
+
+  })
+
+  describe('activate', () => {
+
+    it('should return array of activated neurons', () => {
+      const layer = new Layer(5)
+
+      const activations = layer.activate()
+
+      expect(activations).to.be.an('array')
+      expect(activations).to.have.length(5)
+      expect(activations[0]).to.equal(0.5)
     })
 
   })
