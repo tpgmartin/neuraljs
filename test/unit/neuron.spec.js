@@ -25,4 +25,40 @@ describe('Neuron', () => {
 
   })
 
+  describe('project', () => {
+
+    it('should return connection to target neuron', () => {
+      const from = new Neuron()
+      const to = new Neuron()
+
+      const connection = from.project(to)
+
+      expect(connection).to.be.an('object')
+      expect(connection.from).to.equal(from)
+      expect(connection.to).to.equal(to)
+    })
+
+    it('should update connections and neighbours of \'from\' neuron', () => {
+      const from = new Neuron()
+      const to = new Neuron()
+
+      const connection = from.project(to)
+
+      expect(from.connections.projected).to.be.an('object')
+      expect(from.connections.projected[connection.uid]).to.equal(connection)
+      expect(from.neighbours[to.uid]).to.equal(to)
+    })
+
+    it('should update connections of \'to\' target neuron', () => {
+      const from = new Neuron()
+      const to = new Neuron()
+
+      const connection = from.project(to)
+
+      expect(to.connections.inputs).to.be.an('object')
+      expect(to.connections.inputs[connection.uid]).to.equal(connection)
+    })
+
+  })
+
 })
