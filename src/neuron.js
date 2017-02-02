@@ -20,6 +20,10 @@ export default class Neuron {
     return this.activation
   }
 
+  backPropagate() {
+
+  }
+
   project(target) {
 
     const connection = {

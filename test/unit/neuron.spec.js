@@ -25,6 +25,14 @@ describe('Neuron', () => {
 
   })
 
+  describe('backPropagate', () => {
+
+    it('should update projected error', () => {
+      expect.fail()
+    })
+
+  })
+
   describe('project', () => {
 
     it('should return connection to target neuron', () => {
